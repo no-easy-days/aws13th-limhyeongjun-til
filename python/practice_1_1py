@@ -1,0 +1,130 @@
+## Part 1. 변수실습
+### 실습 1: 변수 선언
+작성코드1 : 
+username = "임형준"
+age = 27
+numbers = 17
+
+print("username = " + username + " \nage = " , age , "\nnumber = " , numbers)
+
+작성코드2 :
+username = "임형준"
+age = 27
+favorite_number = 17
+
+print(username)
+print(age)
+print(favorite_number)
+
+### 실습 2: 값 교환(기초)
+
+작성코드 :
+first = "A"
+second = "B"
+
+first, second = second, first
+print(first)
+print(second)
+
+### 실습 3 : 복합 연산(기초)
+
+작성코드 :
+balance = 10000
+balance = balance - 3000
+balance = balance * 2
+
+print(balance)
+
+작성코드 2:
+balance = 10000
+balance -= 3000
+balance *= 2
+
+print(balance)
+
+### 실습 4: 오류수정(응용)
+작성코드:
+second_place = "은메달" #변수명에 숫자로 시작하면 안됨
+user_name = "홍길동" #변수명 중간에 공백이 있으면 안됨
+grade = "1학년" #class는 변수명이 될수없음
+
+## Part 2.자료형 실습
+### 실습 : 자료형 확인하기(기초)
+
+작성코드:
+print(type(42))
+print(type(3.14))
+print(type("Hello"))
+print(type(True))
+print(type(None))
+
+###실습 6. 형변환 연습(기초)
+
+작성코드 :
+num1_str = input("문자열을 입력해주세요 :")
+num2_str = input("문자열을 입력해주세요 : ")
+
+num1 = int(num1_str)
+num2 = int(num2_str)
+
+print(int(num1))
+print(int(num2))
+
+### 실습 7. 자기소개 프로그램(응용)
+작성코드 :
+username1 = input("이름을 입력해주세요 : ")
+user_age = input("나이를 입력해주세요 : ")
+user_height = input("키를 입력해주세요 : ")
+
+user_age = int(user_age)
+
+print(f"제 이름은 {username1}입니다. 내년에 {user_age + 1}세가 됩니다. 그리고 제 키는 {user_height}cm입니다.")
+
+### 실습 8 : 계산기 만들기(심화)
+작성코드 :
+number1 = float(input("첫 번째 숫자 입력 : "))
+operator = input("연산자 입력(+, -, *, /, //, %) : ")
+number2 = float(input("두 번째 숫자 입력 : "))
+
+if operator == "+":
+    result = number1 + number2
+elif operator == "-":
+    result = number1 - number2
+elif operator == "*":
+    result = number1 * number2
+elif operator == "/":
+    result = number1 / number2
+elif operator == "//":
+    result = number1 // number2
+elif operator == "%":
+    result = number1 % number2
+
+print(f"{number1} {operator} {number2} = {result}")
+
+작성코드(수정):
+number1 = float(input("첫 번째 숫자 입력 : "))
+operator = input("연산자 입력(+, -, *, /, //, %) : ")
+number2 = float(input("두 번째 숫자 입력 : "))
+
+if operator == "+":
+    result = number1 + number2
+elif operator == "-":
+    result = number1 - number2
+elif operator == "*":
+    result = number1 * number2
+elif operator == "/":
+    if number2 == 0:
+        print("오류 : 0으로 나눌 수 없습니다")
+        result = None
+    else:
+        result = number1 / number2
+elif operator == "//":
+    result = number1 // number2
+elif operator == "%":
+    result = number1 % number2
+else:
+    print("오류 : 지원하지 않는 연산자 입니다.")
+    result = None
+
+if result is not None:
+    print(f"{number1} {operator} {number2} = {result}")
