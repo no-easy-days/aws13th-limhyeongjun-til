@@ -1,0 +1,2 @@
+# ORM (Object Relational Mapping)
+  - 객체 지향 프로그래밍 언어의 객체(Object)와 관계형 데이터베이스(RDBMS)의 테이블(Relational)을 자동으로 연결(Mapping) 해주는 기술
